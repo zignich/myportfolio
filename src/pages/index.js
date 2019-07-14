@@ -2,20 +2,19 @@ import { graphql } from 'gatsby'
 import React from 'react'
 import get from 'lodash/get'
 import { Link } from 'gatsby'
+import Img from 'gatsby-image'
 
 import Post from 'templates/Post'
 import Meta from 'components/Meta'
 import Layout from 'components/Layout'
 
-//style module
 import indexStyles from './index.module.scss'
 
-import cover_illustr from '../assets/images/cover/illustration_cover.png'
-import cover_web from '../assets/images/cover/webdesign_cover.png'
-import cover_smm from '../assets/images/cover/smm_cover.png'
-import cover_graphic from '../assets/images/cover/graphic_cover.png'
-
 const IndexPage = ({ data, location }) => {
+  const illustr = get(data, 'illustr.childImageSharp.sizes')
+  const webdesign = get(data, 'webdesign.childImageSharp.sizes')
+  const graphicdesign = get(data, 'graphicdesign.childImageSharp.sizes')
+  const smm = get(data, 'smm.childImageSharp.sizes')
 
   return (
     <Layout location={location}>
@@ -26,30 +25,30 @@ const IndexPage = ({ data, location }) => {
             <h1 className="font-weight-light text-center">Hi and welcome to my portfolio!</h1>
             <hr className="pb-3"/>
             <div className="row card-deck text-center">
-              <div className={"card col-md-6 col-sm-12 " + indexStyles.card}>
+              <div className={"card col-md-6 col-sm-12 pt-3 " + indexStyles.card}>
                 <Link to="/works/illustrations/">
-                <img src={cover_illustr} className={"card-img-top pt-3 " + indexStyles.indeximg}/>
+                <Img sizes={illustr} className={"card-img-top pt-3 " + indexStyles.indeximg} />
                 <div className="card-title"><h2 className="font-weight-light">- Illustrations -</h2></div>
                 </Link>
               </div>
-              <div className={"card col-md-6 col-sm-12 " + indexStyles.card}>
+              <div className={"card col-md-6 col-sm-12 pt-3 " + indexStyles.card}>
                 <Link to="/works/webdesign">
-                <img src={cover_web} className={"card-img-top pt-3 " + indexStyles.indeximg} />
+                <Img sizes={webdesign} className={"card-img-top pt-3 " + indexStyles.indeximg} />
                 <div className="card-title"><h2 className="font-weight-light">- Web design -</h2></div>
                 </Link>
               </div>
             </div>
 
             <div className="row card-deck text-center mt-3">
-              <div className={"card col-md-6 col-sm-12 " + indexStyles.card}>
+              <div className={"card col-md-6 col-sm-12 pt-3 " + indexStyles.card}>
                 <Link to="/works/graphicdesign">
-                <img src={cover_graphic} className={"card-img-top pt-3 " + indexStyles.indeximg} />
+                <Img sizes={graphicdesign} className={"card-img-top pt-3 " + indexStyles.indeximg} />
                 <div className="card-title"><h2 className="font-weight-light">- Graphic design -</h2></div>
                 </Link>
               </div>
-              <div className={"card col-md-6 col-sm-12 " + indexStyles.card}>
+              <div className={"card col-md-6 col-sm-12 pt-3 " + indexStyles.card}>
                 <Link to="/works/smmdesign">
-                <img src={cover_smm} className={"card-img-top pt-3 " + indexStyles.indeximg} />
+                <Img sizes={smm} className={"card-img-top pt-3 " + indexStyles.indeximg} />
                 <div className="card-title"><h2 className="font-weight-light">- Designs for social media -</h2></div>
                 </Link>
               </div>
@@ -72,34 +71,37 @@ export const pageQuery = graphql`
         description
         url: siteUrl
         author
-        twitter
-        adsense
       }
     }
-    remark: allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-    ) {
-      posts: edges {
-        post: node {
-          html
-          frontmatter {
-            layout
-            title
-            path
-            category
-            tags
-            description
-            date(formatString: "YYYY/MM/DD")
-            image {
-              childImageSharp {
-                fixed(width: 500) {
-                  ...GatsbyImageSharpFixed_withWebp
-                }
-              }
-            }
-          }
+
+    illustr: file(relativePath: { eq: "cover/illustr.png" }) {
+      childImageSharp {
+        sizes(quality: 100) {
+          ...GatsbyImageSharpSizes_withWebp
         }
       }
     }
+    graphicdesign: file(relativePath: { eq: "cover/graphicdesign.png" }) {
+      childImageSharp {
+        sizes(quality: 100) {
+          ...GatsbyImageSharpSizes_withWebp
+        }
+      }
+    }
+    webdesign: file(relativePath: { eq: "cover/webdesign.png" }) {
+      childImageSharp {
+        sizes(quality: 100) {
+          ...GatsbyImageSharpSizes_withWebp
+        }
+      }
+    }
+    smm: file(relativePath: { eq: "cover/smm.png" }) {
+      childImageSharp {
+        sizes(quality: 100) {
+          ...GatsbyImageSharpSizes_withWebp
+        }
+      }
+    }
+
   }
 `
