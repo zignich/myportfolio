@@ -76,7 +76,7 @@ const AboutMe = ({ data, location }) => {
             </div>
             <div className="text-center">
               <h2 className="font-weight-light pt-3">List of software I work in:</h2>
-              Photoshop, Adobe Animate (flash), Inkscape, Illustrator, CorelDraw, Blender3D
+              Photoshop, Inkscape, Illustrator, CorelDraw, Blender3D, Adobe Animate (flash)
 
             </div>
           </div>
