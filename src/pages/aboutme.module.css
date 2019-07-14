@@ -1,0 +1,34 @@
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+.skillIcon {
+    font-size: inherit;
+    padding-left: 4px;
+    color: orange;
+}
+.skillIconGreen {
+  font-size: inherit;
+  padding-left: 4px;
+  color: #59c977;
+}
+.skillIconEmpty {
+  font-size: inherit;
+  padding-left: 4px;
+  color: grey;
+}
+.skills {
+  font-size: 1.3em;
+  font-weight: lighter;
+}
+.aboutimg {
+  height: 100%;
+  width: auto;
+}
+.breadcrumb {
+  background-color: white;
+  height: 20px;
+}
+.abouthr {
+  width: 100% !important;
+}

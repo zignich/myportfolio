@@ -1,10 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatstrap',
-    description: 'Gatsby starter for bootstrap a blog',
+    title: 'ChingizDs',
+    description: 'My design portfolio website',
     siteUrl: 'https://gatstrap.netlify.com',
-    author: 'jaxx2104',
-    twitter: 'jaxx2104',
+    author: 'Chingiz',
+    twitter: '',
     adsense: '',
   },
   pathPrefix: '/',
@@ -50,9 +50,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'Gatstrap',
-        short_name: 'Gatstrap',
-        description: 'Gatsby starter for bootstrap a blog',
+        name: 'Chingiz Ds Portfolio',
+        short_name: 'ChingizDs',
+        description: 'My portfolio website',
         homepage_url: 'https://gatstrap.netlify.com',
         start_url: '/',
         background_color: '#fff',

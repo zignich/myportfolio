@@ -6,6 +6,7 @@ import {
   faApple,
   faAws,
   faFacebook,
+  faInstagram,
   faGithub,
   faHtml5,
   faJs,
@@ -17,10 +18,18 @@ import {
 } from '@fortawesome/free-brands-svg-icons'
 import './style.scss'
 
+import {
+  faEnvelopeOpenText,
+  faSquare
+ } from '@fortawesome/free-solid-svg-icons'
+
 library.add(
+  faSquare,
+  faEnvelopeOpenText,
   faApple,
   faAws,
   faFacebook,
+  faInstagram,
   faGithub,
   faHtml5,
   faJs,
