@@ -2,6 +2,7 @@ import { graphql } from 'gatsby'
 import React from 'react'
 import get from 'lodash/get'
 import { Link } from 'gatsby'
+import Img from 'gatsby-image'
 
 import Meta from 'components/Meta'
 import Layout from 'components/Layout'
@@ -21,6 +22,9 @@ import image12 from '../../assets/images/webdesign/web_design_12.jpg'
 
 const WebDesign = ({ data, location }) => {
 
+  const imagew1 = get(data, 'imagew1.childImageSharp.sizes')
+  const imagew2 = get(data, 'imagew2.childImageSharp.sizes')
+
   return (
     <Layout location={location}>
       <Meta site={get(data, 'site.meta')} />
@@ -31,8 +35,8 @@ const WebDesign = ({ data, location }) => {
             <hr />
             <div className="row">
               <div className="card col-md-12 col-sm-12 pt-3">
-                <img src={image11} />
-                <img src={image12} />
+                <Img sizes={imagew1} className="mb-3" />
+                <Img sizes={imagew2} className="mb-3" />
               </div>
 
               <div className="card col-md-12 col-sm-12 pt-3 mt-3">
@@ -76,5 +80,21 @@ export const pageQuery = graphql`
         author
       }
     }
+
+    imagew1: file(relativePath: { eq: "webdesign/web_design_11.jpg" }) {
+      childImageSharp {
+        sizes(quality: 100) {
+          ...GatsbyImageSharpSizes_withWebp
+        }
+      }
+    }
+    imagew2: file(relativePath: { eq: "webdesign/web_design_12.jpg" }) {
+      childImageSharp {
+        sizes(quality: 100) {
+          ...GatsbyImageSharpSizes_withWebp
+        }
+      }
+    }
+
   }
 `
