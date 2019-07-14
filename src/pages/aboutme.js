@@ -2,6 +2,7 @@ import { graphql } from 'gatsby'
 import React from 'react'
 import get from 'lodash/get'
 import { Link } from 'gatsby'
+import Img from 'gatsby-image'
 
 import aboutmeStyles from './aboutme.module.css'
 
@@ -10,9 +11,10 @@ import Layout from 'components/Layout'
 import Icon from 'components/Icon'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-import image1 from '../../content/images/cover/about.png'
+//import image1 from '../../content/images/cover/about.png'
 
 const AboutMe = ({ data, location }) => {
+  const image1 = get(data, 'image1.childImageSharp.sizes')
 
   return (
     <Layout location={location}>
@@ -24,7 +26,9 @@ const AboutMe = ({ data, location }) => {
             <h1 className="font-weight-light text-center">About me</h1>
             <hr />
             <div className="row">
-              <img src={image1} className={"col-md-6 col-sm-12 " + aboutmeStyles.aboutimg} />
+              <div className="col-md-6 col-sm-12">
+                <Img sizes={image1} className="mt-3 mb-3" />
+              </div>
               <div className="col-md-6 col-sm-12">
                 Hi, my name is Chingiz.<br/>
                 I'm a graphic designer, illustrator and animator from
@@ -97,6 +101,13 @@ export const pageQuery = graphql`
         description
         url: siteUrl
         author
+      }
+    }
+    image1: file(relativePath: { eq: "cover/about.png" }) {
+      childImageSharp {
+        sizes(quality: 100) {
+          ...GatsbyImageSharpSizes_withWebp
+        }
       }
     }
   }

@@ -9,7 +9,7 @@ class Navi extends React.Component {
       <nav className="navbar navbar-expand navbar-dark flex-row flex-md-row bg-primary navfixed">
         <div className="container">
           <Link className="text-center" to="/">
-            <h1 className="navbar-brand mb-0">{title}</h1>
+            <h1 className="navbar-brand mb-0 font-weight-normal">{title}</h1>
           </Link>
 
           <div className="navbar-nav-scroll">
@@ -31,7 +31,7 @@ class Navi extends React.Component {
                 }
               >
                 <Link to="/aboutme/" className="nav-link">
-                  About me
+                  About
                 </Link>
               </li>
               <li
