@@ -10,7 +10,7 @@ import Layout from 'components/Layout'
 import Icon from 'components/Icon'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-import image1 from '../content/images/cover/about.png'
+import image1 from '../../content/images/cover/about.png'
 
 const AboutMe = ({ data, location }) => {
 

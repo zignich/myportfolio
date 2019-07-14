@@ -9,7 +9,7 @@ import Layout from 'components/Layout'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import aboutmeStyles from './aboutme.module.css'
 
-import image1 from '../content/images/cover/contacts.png'
+import image1 from '../../content/images/cover/contacts.png'
 
 const ContactsPage = ({ data, location }) => {
 
