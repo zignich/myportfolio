@@ -7,6 +7,7 @@ import aboutmeStyles from './aboutme.module.css'
 
 import Meta from 'components/Meta'
 import Layout from 'components/Layout'
+import Icon from 'components/Icon'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import image1 from '../assets/images/cover/img_about.png'
@@ -96,8 +97,6 @@ export const pageQuery = graphql`
         description
         url: siteUrl
         author
-        twitter
-        adsense
       }
     }
   }
