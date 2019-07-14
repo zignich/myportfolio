@@ -26,14 +26,14 @@ const IllustrationsPage = ({ data, location }) => {
             <h1 className="font-weight-light text-center">Illustrations</h1>
             <hr />
             <div className="row">
+              <img src={image7} className="col-md-12 col-sm-12"/>
+              <img src={image8} className="col-md-12 col-sm-12"/>
+              <img src={image6} className="col-md-12 col-sm-12"/>
+              <img src={image4} className="col-md-12 col-sm-12"/>
+              <img src={image5} className="col-md-12 col-sm-12"/>
               <img src={image1} className="col-md-12 col-sm-12"/>
               <img src={image2} className="col-md-12 col-sm-12"/>
               <img src={image3} className="col-md-12 col-sm-12"/>
-              <img src={image4} className="col-md-12 col-sm-12"/>
-              <img src={image5} className="col-md-12 col-sm-12"/>
-              <img src={image6} className="col-md-12 col-sm-12"/>
-              <img src={image7} className="col-md-12 col-sm-12"/>
-              <img src={image8} className="col-md-12 col-sm-12"/>
             </div>
           </div>
         </section>

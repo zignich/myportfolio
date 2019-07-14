@@ -30,18 +30,32 @@ const WebDesign = ({ data, location }) => {
             <h1 className="font-weight-light text-center">Web design</h1>
             <hr />
             <div className="row">
-              <img src={image1} className="col-md-12 col-sm-12"/>
-              <img src={image2} className="col-md-12 col-sm-12"/>
-              <img src={image3} className="col-md-12 col-sm-12"/>
-              <img src={image4} className="col-md-12 col-sm-12"/>
-              <img src={image5} className="col-md-12 col-sm-12"/>
-              <img src={image6} className="col-md-12 col-sm-12"/>
-              <img src={image7} className="col-md-12 col-sm-12"/>
-              <img src={image8} className="col-md-12 col-sm-12"/>
-              <img src={image9} className="col-md-12 col-sm-12"/>
-              <img src={image10} className="col-md-12 col-sm-12"/>
-              <img src={image11} className="col-md-12 col-sm-12"/>
-              <img src={image12} className="col-md-12 col-sm-12"/>
+              <div className="card col-md-12 col-sm-12 pt-3">
+                <img src={image11} />
+                <img src={image12} />
+              </div>
+
+              <div className="card col-md-12 col-sm-12 pt-3 mt-3">
+                <img src={image5} />
+                <img src={image6} />
+                <img src={image7} />
+              </div>
+
+              <div className="card col-md-12 col-sm-12 pt-3 mt-3">
+                <img src={image8} />
+              </div>
+
+              <div className="card col-md-12 col-sm-12 pt-3 mt-3">
+                <img src={image9} />
+                <img src={image10} />
+              </div>
+
+              <div className="card col-md-12 col-sm-12 pt-3 mt-3">
+                <img src={image1} />
+                <img src={image2} />
+                <img src={image3} />
+                <img src={image4} />
+              </div>
             </div>
           </div>
         </section>
