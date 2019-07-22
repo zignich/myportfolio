@@ -3,15 +3,16 @@ import React from 'react'
 import get from 'lodash/get'
 import { Link } from 'gatsby'
 import './contacts.scss'
+import Img from 'gatsby-image'
 
 import Meta from 'components/Meta'
 import Layout from 'components/Layout'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import aboutmeStyles from './aboutme.module.css'
 
-import image1 from '../../content/images/cover/contacts.png'
-
 const ContactsPage = ({ data, location }) => {
+
+  const image1 = get(data, 'image1.childImageSharp.sizes')
 
   return (
     <Layout location={location}>
@@ -23,6 +24,9 @@ const ContactsPage = ({ data, location }) => {
             <h1 className="font-weight-light text-center">Contact me</h1>
             <hr />
             <div className="row">
+              <div className="col-md-6 col-sm-12">
+                <Img sizes={image1} className="mt-3 mb-3" />
+              </div>
               <div className="col-md-6 col-sm-12">
                 <div>
                   Feel free to contact me if you have any questions or if you just want to say 'Hello'
@@ -42,7 +46,6 @@ const ContactsPage = ({ data, location }) => {
                 </div>
 
               </div>
-              <img src={image1} className="col-md-6 col-sm-12"/>
             </div>
           </div>
         </section>
@@ -63,5 +66,13 @@ export const pageQuery = graphql`
         author
       }
     }
+    image1: file(relativePath: { eq: "cover/contacts.png" }) {
+      childImageSharp {
+        sizes(quality: 100) {
+          ...GatsbyImageSharpSizes_withWebp
+        }
+      }
+    }
+
   }
 `
