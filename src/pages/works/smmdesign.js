@@ -25,13 +25,27 @@ const SmmDesign = ({ data, location }) => {
           <div className="container">
             <h1 className="font-weight-light text-center">Designs for social media</h1>
             <hr className="pb-2"/>
-              <Img sizes={image1} className="col-md-12 col-sm-12 mb-3 p-3"/>
-              <Img sizes={image2} className="col-md-12 col-sm-12 mb-3 p-3"/>
-              <Img sizes={image3} className="col-md-12 col-sm-12 mb-3 p-3"/>
-              <Img sizes={image4} className="col-md-12 col-sm-12 mb-3 p-3"/>
-              <Img sizes={image5} className="col-md-12 col-sm-12 mb-3 p-3"/>
-              <Img sizes={image6} className="col-md-12 col-sm-12 mb-3 p-3"/>
-              <Img sizes={image7} className="col-md-12 col-sm-12 mb-3 p-3"/>
+              <div className="card col-md-12 col-sm-12 pt-3 mt-2">
+                <Img sizes={image1} className="mb-3"/>
+              </div>
+              <div className="card col-md-12 col-sm-12 pt-3 mt-2">
+                <Img sizes={image2} className="mb-3"/>
+              </div>
+              <div className="card col-md-12 col-sm-12 pt-3 mt-2">
+                <Img sizes={image3} className="mb-3"/>
+              </div>
+              <div className="card col-md-12 col-sm-12 pt-3 mt-2">
+                <Img sizes={image4} className="mb-3"/>
+              </div>
+              <div className="card col-md-12 col-sm-12 pt-3 mt-2">
+                <Img sizes={image5} className="mb-3"/>
+              </div>
+              <div className="card col-md-12 col-sm-12 pt-3 mt-2">
+                <Img sizes={image6} className="mb-3"/>
+              </div>
+              <div className="card col-md-12 col-sm-12 pt-3 mt-2">
+                <Img sizes={image7} className="mb-3"/>
+              </div>
 
           </div>
         </section>
