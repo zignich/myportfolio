@@ -17,6 +17,8 @@ const IllustrationsPage = ({ data, location }) => {
   const image6 = get(data, 'image6.childImageSharp.sizes')
   const image7 = get(data, 'image7.childImageSharp.sizes')
   const image8 = get(data, 'image8.childImageSharp.sizes')
+  const image9 = get(data, 'image9.childImageSharp.sizes')
+  const image10 = get(data, 'image10.childImageSharp.sizes')
 
   return (
     <Layout location={location}>
@@ -34,7 +36,9 @@ const IllustrationsPage = ({ data, location }) => {
               <Img sizes={image5} className="col-md-12 col-sm-12 mb-3"/>
               <Img sizes={image6} className="col-md-12 col-sm-12 mb-3"/>
               <Img sizes={image7} className="col-md-12 col-sm-12 mb-3"/>
-              <Img sizes={image8} className="col-md-12 col-sm-12"/>
+              <Img sizes={image8} className="col-md-12 col-sm-12 mb-3"/>
+              <Img sizes={image9} className="col-md-12 col-sm-12 mb-3"/>
+              <Img sizes={image10} className="col-md-12 col-sm-12"/>
             </div>
           </div>
         </section>
@@ -105,6 +109,20 @@ export const pageQuery = graphql`
       }
     }
     image8: file(relativePath: { eq: "illustrations/illustr_8.jpg" }) {
+      childImageSharp {
+        sizes(quality: 100) {
+          ...GatsbyImageSharpSizes_withWebp
+        }
+      }
+    }
+    image9: file(relativePath: { eq: "illustrations/illustr_9.jpg" }) {
+      childImageSharp {
+        sizes(quality: 100) {
+          ...GatsbyImageSharpSizes_withWebp
+        }
+      }
+    }
+    image10: file(relativePath: { eq: "illustrations/illustr_10.jpg" }) {
       childImageSharp {
         sizes(quality: 100) {
           ...GatsbyImageSharpSizes_withWebp

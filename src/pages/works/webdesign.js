@@ -9,18 +9,21 @@ import Layout from 'components/Layout'
 
 const WebDesign = ({ data, location }) => {
 
-  const imagew1 = get(data, 'imagew1.childImageSharp.sizes')
-  const imagew2 = get(data, 'imagew2.childImageSharp.sizes')
-  const imagew3 = get(data, 'imagew3.childImageSharp.sizes')
-  const imagew4 = get(data, 'imagew4.childImageSharp.sizes')
-  const imagew5 = get(data, 'imagew5.childImageSharp.sizes')
-  const imagew6 = get(data, 'imagew6.childImageSharp.sizes')
-  const imagew7 = get(data, 'imagew7.childImageSharp.sizes')
-  const imagew8 = get(data, 'imagew8.childImageSharp.sizes')
-  const imagew9 = get(data, 'imagew9.childImageSharp.sizes')
-  const imagew10 = get(data, 'imagew10.childImageSharp.sizes')
-  const imagew11 = get(data, 'imagew11.childImageSharp.sizes')
-  const imagew12 = get(data, 'imagew12.childImageSharp.sizes')
+  const image1 = get(data, 'image1.childImageSharp.sizes')
+  const image2 = get(data, 'image2.childImageSharp.sizes')
+  const image3 = get(data, 'image3.childImageSharp.sizes')
+  const image4 = get(data, 'image4.childImageSharp.sizes')
+  const image5 = get(data, 'image5.childImageSharp.sizes')
+  const image6 = get(data, 'image6.childImageSharp.sizes')
+  const image7 = get(data, 'image7.childImageSharp.sizes')
+  const image8 = get(data, 'image8.childImageSharp.sizes')
+  const image9 = get(data, 'image9.childImageSharp.sizes')
+  const image10 = get(data, 'image10.childImageSharp.sizes')
+  const image11 = get(data, 'image11.childImageSharp.sizes')
+  const image12 = get(data, 'image12.childImageSharp.sizes')
+  const image13 = get(data, 'image13.childImageSharp.sizes')
+  const image14 = get(data, 'image14.childImageSharp.sizes')
+  const image15 = get(data, 'image15.childImageSharp.sizes')
 
   return (
     <Layout location={location}>
@@ -32,31 +35,45 @@ const WebDesign = ({ data, location }) => {
             <hr />
             <div className="row">
               <div className="card col-md-12 col-sm-12 pt-3 mt-2">
-                <Img sizes={imagew1} className="mb-3" />
-                <Img sizes={imagew2} className="mb-3" />
+                <Img sizes={image1} className="mb-3" />
+                <Img sizes={image2} className="mb-3" />
               </div>
 
               <div className="card col-md-12 col-sm-12 pt-3 mt-3">
-                <Img sizes={imagew7} className="mb-3" />
-                <Img sizes={imagew8} className="mb-3" />
-                <Img sizes={imagew9} className="mb-3" />
+                <Img sizes={image7} className="mb-3" />
+                <Img sizes={image8} className="mb-3" />
+                <Img sizes={image9} className="mb-3" />
               </div>
 
               <div className="card col-md-12 col-sm-12 pt-3 mt-3">
-                <Img sizes={imagew10} className="mb-3" />
+                <Img sizes={image10} className="mb-3" />
               </div>
 
               <div className="card col-md-12 col-sm-12 pt-3 mt-3">
-                <Img sizes={imagew11} className="mb-3" />
-                <Img sizes={imagew12} className="mb-3" />
+                <Img sizes={image11} className="mb-3" />
+                <Img sizes={image12} className="mb-3" />
               </div>
 
               <div className="card col-md-12 col-sm-12 pt-3 mt-3">
-                <Img sizes={imagew3} className="mb-3" />
-                <Img sizes={imagew4} className="mb-3" />
-                <Img sizes={imagew5} className="mb-3" />
-                <Img sizes={imagew6} className="mb-3" />
+                <Img sizes={image3} className="mb-3" />
+                <Img sizes={image4} className="mb-3" />
+                <Img sizes={image5} className="mb-3" />
+                <Img sizes={image6} className="mb-3" />
               </div>
+              <div className="col-md-12 col-sm-12 pt-3 mt-3 mb-3 text-center">
+                <h2 className="font-weight-light">- LANDING PAGES -</h2>
+                <hr />
+              </div>
+              <div className="card col-md-12 col-sm-12 pt-3 mt-3">
+                <Img sizes={image13} className="mb-3" />
+              </div>
+              <div className="card col-md-12 col-sm-12 pt-3 mt-3">
+                <Img sizes={image14} className="mb-3" />
+              </div>
+              <div className="card col-md-12 col-sm-12 pt-3 mt-3">
+                <Img sizes={image15} className="mb-3" />
+              </div>
+
             </div>
           </div>
         </section>
@@ -78,84 +95,105 @@ export const pageQuery = graphql`
       }
     }
 
-    imagew1: file(relativePath: { eq: "webdesign/web_design_11.jpg" }) {
+    image1: file(relativePath: { eq: "webdesign/web_design_11.jpg" }) {
       childImageSharp {
         sizes(quality: 100) {
           ...GatsbyImageSharpSizes_withWebp
         }
       }
     }
-    imagew2: file(relativePath: { eq: "webdesign/web_design_12.jpg" }) {
+    image2: file(relativePath: { eq: "webdesign/web_design_12.jpg" }) {
       childImageSharp {
         sizes(quality: 100) {
           ...GatsbyImageSharpSizes_withWebp
         }
       }
     }
-    imagew3: file(relativePath: { eq: "webdesign/web_design_1.jpg" }) {
+    image3: file(relativePath: { eq: "webdesign/web_design_1.jpg" }) {
       childImageSharp {
         sizes(quality: 100) {
           ...GatsbyImageSharpSizes_withWebp
         }
       }
     }
-    imagew4: file(relativePath: { eq: "webdesign/web_design_2.jpg" }) {
+    image4: file(relativePath: { eq: "webdesign/web_design_2.jpg" }) {
       childImageSharp {
         sizes(quality: 100) {
           ...GatsbyImageSharpSizes_withWebp
         }
       }
     }
-    imagew5: file(relativePath: { eq: "webdesign/web_design_3.jpg" }) {
+    image5: file(relativePath: { eq: "webdesign/web_design_3.jpg" }) {
       childImageSharp {
         sizes(quality: 100) {
           ...GatsbyImageSharpSizes_withWebp
         }
       }
     }
-    imagew6: file(relativePath: { eq: "webdesign/web_design_4.jpg" }) {
+    image6: file(relativePath: { eq: "webdesign/web_design_4.jpg" }) {
       childImageSharp {
         sizes(quality: 100) {
           ...GatsbyImageSharpSizes_withWebp
         }
       }
     }
-    imagew7: file(relativePath: { eq: "webdesign/web_design_5.jpg" }) {
+    image7: file(relativePath: { eq: "webdesign/web_design_5.jpg" }) {
       childImageSharp {
         sizes(quality: 100) {
           ...GatsbyImageSharpSizes_withWebp
         }
       }
     }
-    imagew8: file(relativePath: { eq: "webdesign/web_design_6.jpg" }) {
+    image8: file(relativePath: { eq: "webdesign/web_design_6.jpg" }) {
       childImageSharp {
         sizes(quality: 100) {
           ...GatsbyImageSharpSizes_withWebp
         }
       }
     }
-    imagew9: file(relativePath: { eq: "webdesign/web_design_7.jpg" }) {
+    image9: file(relativePath: { eq: "webdesign/web_design_7.jpg" }) {
       childImageSharp {
         sizes(quality: 100) {
           ...GatsbyImageSharpSizes_withWebp
         }
       }
     }
-    imagew10: file(relativePath: { eq: "webdesign/web_design_8.jpg" }) {
+    image10: file(relativePath: { eq: "webdesign/web_design_8.jpg" }) {
       childImageSharp {
         sizes(quality: 100) {
           ...GatsbyImageSharpSizes_withWebp
         }
       }
     }
-    imagew11: file(relativePath: { eq: "webdesign/web_design_9.jpg" }) {
+    image11: file(relativePath: { eq: "webdesign/web_design_9.jpg" }) {
       childImageSharp {
         sizes(quality: 100) {
           ...GatsbyImageSharpSizes_withWebp
         }
       }
     }
-    imagew12: file(relativePath: { eq: "webdesign/web_design_10.jpg" }) {
+    image12: file(relativePath: { eq: "webdesign/web_design_10.jpg" }) {
+      childImageSharp {
+        sizes(quality: 100) {
+          ...GatsbyImageSharpSizes_withWebp
+        }
+      }
+    }
+    image13: file(relativePath: { eq: "webdesign/web_design_13.jpg" }) {
+      childImageSharp {
+        sizes(quality: 100) {
+          ...GatsbyImageSharpSizes_withWebp
+        }
+      }
+    }
+    image14: file(relativePath: { eq: "webdesign/web_design_14.jpg" }) {
+      childImageSharp {
+        sizes(quality: 100) {
+          ...GatsbyImageSharpSizes_withWebp
+        }
+      }
+    }
+    image15: file(relativePath: { eq: "webdesign/web_design_15.jpg" }) {
       childImageSharp {
         sizes(quality: 100) {
           ...GatsbyImageSharpSizes_withWebp
