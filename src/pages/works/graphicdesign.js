@@ -24,7 +24,7 @@ const GraphicDesign = ({ data, location }) => {
       <div>
         <section className="pt-4">
           <div className="container">
-            <h1 className="font-weight-light text-center">Graphic design</h1>
+            <h1 className="font-weight-light text-center">Print design</h1>
             <hr />
             <div className="row">
 
