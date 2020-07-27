@@ -49,7 +49,7 @@ const AboutMe = ({ data, location }) => {
                 <FontAwesomeIcon icon="square" className={aboutmeStyles.skillIconGreen}/>
                 <FontAwesomeIcon icon="square" className={aboutmeStyles.skillIconGreen}/>
                 <FontAwesomeIcon icon="square" className={aboutmeStyles.skillIconEmpty}/>
-                <FontAwesomeIcon icon="square" className={aboutmeStyles.skillIconEmpty}/> - graphic design
+                <FontAwesomeIcon icon="square" className={aboutmeStyles.skillIconEmpty}/> - print design
                 </li>
                 <li className={aboutmeStyles.skills}>
                 <FontAwesomeIcon icon="square" className={aboutmeStyles.skillIcon}/>
