@@ -43,7 +43,7 @@ const IndexPage = ({ data, location }) => {
               <div className={"card col-md-6 col-sm-12 pt-3 " + indexStyles.card}>
                 <Link to="/works/graphicdesign">
                 <Img sizes={graphicdesign} className={"card-img-top pt-3 " + indexStyles.indeximg} />
-                <div className="card-title"><h2 className="font-weight-light">- Graphic design -</h2></div>
+                <div className="card-title"><h2 className="font-weight-light">- Print design -</h2></div>
                 </Link>
               </div>
               <div className={"card col-md-6 col-sm-12 pt-3 " + indexStyles.card}>
