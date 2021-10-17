@@ -7,16 +7,11 @@ import Img from 'gatsby-image'
 import Meta from 'components/Meta'
 import Layout from 'components/Layout'
 
-const 3dPage = ({ data, location }) => {
+const RendersPage = ({ data, location }) => {
 
   const image1 = get(data, 'image1.childImageSharp.sizes')
   const image2 = get(data, 'image2.childImageSharp.sizes')
   const image3 = get(data, 'image3.childImageSharp.sizes')
-  const image4 = get(data, 'image4.childImageSharp.sizes')
-  const image5 = get(data, 'image5.childImageSharp.sizes')
-  const image6 = get(data, 'image6.childImageSharp.sizes')
-  const image7 = get(data, 'image7.childImageSharp.sizes')
-  const image8 = get(data, 'image8.childImageSharp.sizes')
 
   return (
     <Layout location={location}>
@@ -24,7 +19,7 @@ const 3dPage = ({ data, location }) => {
       <div>
         <section className="pt-4">
           <div className="container">
-            <h1 className="font-weight-light text-center">Print design</h1>
+            <h1 className="font-weight-light text-center">3d renders</h1>
             <hr />
             <div className="row">
 
@@ -37,21 +32,6 @@ const 3dPage = ({ data, location }) => {
               <div className="card col-md-12 col-sm-12 pt-3 mt-2">
                 <Img sizes={image3} className="mb-3" />
               </div>
-              <div className="card col-md-12 col-sm-12 pt-3 mt-2">
-                <Img sizes={image4} className="mb-3" />
-              </div>
-              <div className="card col-md-12 col-sm-12 pt-3 mt-2">
-                <Img sizes={image5} className="mb-3" />
-              </div>
-              <div className="card col-md-12 col-sm-12 pt-3 mt-2">
-                <Img sizes={image6} className="mb-3" />
-              </div>
-              <div className="card col-md-12 col-sm-12 pt-3 mt-2">
-                <Img sizes={image7} className="mb-3" />
-              </div>
-              <div className="card col-md-12 col-sm-12 pt-3 mt-2">
-                <Img sizes={image8} className="mb-3" />
-              </div>
 
             </div>
           </div>
@@ -61,10 +41,10 @@ const 3dPage = ({ data, location }) => {
   )
 }
 
-export default 3dPage
+export default RendersPage
 
 export const pageQuery = graphql`
-  query 3dQuery {
+  query RendersQuery {
     site {
       meta: siteMetadata {
         title
@@ -94,41 +74,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    image4: file(relativePath: { eq: "graphicDesign/gr_design_4.jpg" }) {
-      childImageSharp {
-        sizes(quality: 100) {
-          ...GatsbyImageSharpSizes_withWebp
-        }
-      }
-    }
-    image5: file(relativePath: { eq: "graphicDesign/gr_design_5.jpg" }) {
-      childImageSharp {
-        sizes(quality: 100) {
-          ...GatsbyImageSharpSizes_withWebp
-        }
-      }
-    }
-    image6: file(relativePath: { eq: "graphicDesign/gr_design_6.jpg" }) {
-      childImageSharp {
-        sizes(quality: 100) {
-          ...GatsbyImageSharpSizes_withWebp
-        }
-      }
-    }
-    image7: file(relativePath: { eq: "graphicDesign/gr_design_7.jpg" }) {
-      childImageSharp {
-        sizes(quality: 100) {
-          ...GatsbyImageSharpSizes_withWebp
-        }
-      }
-    }
-    image8: file(relativePath: { eq: "graphicDesign/gr_design_8.jpg" }) {
-      childImageSharp {
-        sizes(quality: 100) {
-          ...GatsbyImageSharpSizes_withWebp
-        }
-      }
-    }
+
 
   }
 `
