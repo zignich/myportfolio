@@ -12,7 +12,7 @@ const RendersPage = ({ data, location }) => {
   const image1 = get(data, 'image1.childImageSharp.sizes')
   const image2 = get(data, 'image2.childImageSharp.sizes')
   const image3 = get(data, 'image3.childImageSharp.sizes')
-  const image4 = get(data, 'image3.childImageSharp.sizes')
+  const image4 = get(data, 'image4.childImageSharp.sizes')
 
   return (
     <Layout location={location}>
