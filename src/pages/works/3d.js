@@ -14,7 +14,12 @@ const RendersPage = ({ data, location }) => {
   const image3 = get(data, 'image3.childImageSharp.sizes')
   const image4 = get(data, 'image4.childImageSharp.sizes')
   const image5 = get(data, 'image5.childImageSharp.sizes')
-
+  const image6 = get(data, 'image6.childImageSharp.sizes')
+  const image7 = get(data, 'image7.childImageSharp.sizes')
+  const image8 = get(data, 'image8.childImageSharp.sizes')
+  const image9 = get(data, 'image9.childImageSharp.sizes')
+  const image10 = get(data, 'image10.childImageSharp.sizes')
+  
   return (
     <Layout location={location}>
       <Meta site={get(data, 'site.meta')} />
@@ -33,6 +38,21 @@ const RendersPage = ({ data, location }) => {
               </div>
               <div className="card col-md-12 col-sm-12 pt-3 mt-2">
                 <Img sizes={image3} className="mb-3" />
+              </div>
+              <div className="card col-md-12 col-sm-12 pt-3 mt-2">
+                <Img sizes={image10} className="mb-3" />
+              </div>
+              <div className="card col-md-12 col-sm-12 pt-3 mt-2">
+                <Img sizes={image6} className="mb-3" />
+              </div>
+              <div className="card col-md-12 col-sm-12 pt-3 mt-2">
+                <Img sizes={image7} className="mb-3" />
+              </div>
+              <div className="card col-md-12 col-sm-12 pt-3 mt-2">
+                <Img sizes={image8} className="mb-3" />
+              </div>
+              <div className="card col-md-12 col-sm-12 pt-3 mt-2">
+                <Img sizes={image9} className="mb-3" />
               </div>
               <div className="card col-md-12 col-sm-12 pt-3 mt-2">
                 <Img sizes={image4} className="mb-3" />
@@ -90,6 +110,41 @@ export const pageQuery = graphql`
       }
     }
     image5: file(relativePath: { eq: "3d/3d_5.jpg" }) {
+      childImageSharp {
+        sizes(quality: 100) {
+          ...GatsbyImageSharpSizes_withWebp
+        }
+      }
+    }
+    image6: file(relativePath: { eq: "3d/3d_6.jpg" }) {
+      childImageSharp {
+        sizes(quality: 100) {
+          ...GatsbyImageSharpSizes_withWebp
+        }
+      }
+    }
+    image7: file(relativePath: { eq: "3d/3d_7.jpg" }) {
+      childImageSharp {
+        sizes(quality: 100) {
+          ...GatsbyImageSharpSizes_withWebp
+        }
+      }
+    }
+    image8: file(relativePath: { eq: "3d/3d_8.jpg" }) {
+      childImageSharp {
+        sizes(quality: 100) {
+          ...GatsbyImageSharpSizes_withWebp
+        }
+      }
+    }
+    image9: file(relativePath: { eq: "3d/3d_9.jpg" }) {
+      childImageSharp {
+        sizes(quality: 100) {
+          ...GatsbyImageSharpSizes_withWebp
+        }
+      }
+    }
+    image10: file(relativePath: { eq: "3d/3d_10.jpg" }) {
       childImageSharp {
         sizes(quality: 100) {
           ...GatsbyImageSharpSizes_withWebp
