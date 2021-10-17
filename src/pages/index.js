@@ -54,6 +54,15 @@ const IndexPage = ({ data, location }) => {
               </div>
             </div>
 
+            <div className="row card-deck text-center mt-3">
+              <div className={"card col-md-6 col-sm-12 pt-3 " + indexStyles.card}>
+                <Link to="/works/3d">
+                <Img sizes={graphicdesign} className={"card-img-top pt-3 " + indexStyles.indeximg} />
+                <div className="card-title"><h2 className="font-weight-light">- 3D -</h2></div>
+                </Link>
+              </div>
+            </div>
+
           </div>
         </section>
       </div>
