@@ -13,6 +13,7 @@ const RendersPage = ({ data, location }) => {
   const image2 = get(data, 'image2.childImageSharp.sizes')
   const image3 = get(data, 'image3.childImageSharp.sizes')
   const image4 = get(data, 'image4.childImageSharp.sizes')
+  const image5 = get(data, 'image5.childImageSharp.sizes')
 
   return (
     <Layout location={location}>
@@ -35,6 +36,9 @@ const RendersPage = ({ data, location }) => {
               </div>
               <div className="card col-md-12 col-sm-12 pt-3 mt-2">
                 <Img sizes={image4} className="mb-3" />
+              </div>
+              <div className="card col-md-12 col-sm-12 pt-3 mt-2">
+                <Img sizes={image5} className="mb-3" />
               </div>
 
             </div>
@@ -79,6 +83,13 @@ export const pageQuery = graphql`
       }
     }
     image4: file(relativePath: { eq: "3d/3d_4.jpg" }) {
+      childImageSharp {
+        sizes(quality: 100) {
+          ...GatsbyImageSharpSizes_withWebp
+        }
+      }
+    }
+    image5: file(relativePath: { eq: "3d/3d_5.jpg" }) {
       childImageSharp {
         sizes(quality: 100) {
           ...GatsbyImageSharpSizes_withWebp
