@@ -73,21 +73,21 @@ export const pageQuery = graphql`
         author
       }
     }
-    image1: file(relativePath: { eq: "graphicDesign/gr_design_1.jpg" }) {
+    image1: file(relativePath: { eq: "3d/3d_1.jpg" }) {
       childImageSharp {
         sizes(quality: 100) {
           ...GatsbyImageSharpSizes_withWebp
         }
       }
     }
-    image2: file(relativePath: { eq: "graphicDesign/gr_design_2.jpg" }) {
+    image2: file(relativePath: { eq: "3d/3d_2.jpg" }) {
       childImageSharp {
         sizes(quality: 100) {
           ...GatsbyImageSharpSizes_withWebp
         }
       }
     }
-    image3: file(relativePath: { eq: "graphicDesign/gr_design_3.jpg" }) {
+    image3: file(relativePath: { eq: "3d/3d_3.jpg" }) {
       childImageSharp {
         sizes(quality: 100) {
           ...GatsbyImageSharpSizes_withWebp
