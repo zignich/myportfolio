@@ -7,7 +7,7 @@ import Img from 'gatsby-image'
 import Meta from 'components/Meta'
 import Layout from 'components/Layout'
 
-const 3d = ({ data, location }) => {
+const 3dPage = ({ data, location }) => {
 
   const image1 = get(data, 'image1.childImageSharp.sizes')
   const image2 = get(data, 'image2.childImageSharp.sizes')
@@ -61,7 +61,7 @@ const 3d = ({ data, location }) => {
   )
 }
 
-export default 3d
+export default 3dPage
 
 export const pageQuery = graphql`
   query 3dQuery {
