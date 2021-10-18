@@ -15,6 +15,7 @@ const IndexPage = ({ data, location }) => {
   const webdesign = get(data, 'webdesign.childImageSharp.sizes')
   const graphicdesign = get(data, 'graphicdesign.childImageSharp.sizes')
   const smm = get(data, 'smm.childImageSharp.sizes')
+  const render = get(data, 'render.childImageSharp.sizes')
 
   return (
     <Layout location={location}>
@@ -57,8 +58,8 @@ const IndexPage = ({ data, location }) => {
             <div className="row card-deck text-center mt-3">
               <div className={"card col-md-6 col-sm-12 pt-3 " + indexStyles.card}>
                 <Link to="/works/3d">
-                <Img sizes={graphicdesign} className={"card-img-top pt-3 " + indexStyles.indeximg} />
-                <div className="card-title"><h2 className="font-weight-light">- 3D -</h2></div>
+                <Img sizes={render} className={"card-img-top pt-3 " + indexStyles.indeximg} />
+                <div className="card-title"><h2 className="font-weight-light">- 3D render -</h2></div>
                 </Link>
               </div>
             </div>
@@ -105,6 +106,13 @@ export const pageQuery = graphql`
       }
     }
     smm: file(relativePath: { eq: "cover/smm.png" }) {
+      childImageSharp {
+        sizes(quality: 100) {
+          ...GatsbyImageSharpSizes_withWebp
+        }
+      }
+    }
+    render: file(relativePath: { eq: "cover/3d_cover.jpg" }) {
       childImageSharp {
         sizes(quality: 100) {
           ...GatsbyImageSharpSizes_withWebp
